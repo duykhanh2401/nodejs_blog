@@ -1,9 +1,16 @@
+const Course = require('../models/Course');
 
 class SiteController {
-
   // [GET] /news
   index(req, res) {
-    res.render('home');
+    // res.render('home');
+        Course.find({}, (err, course) =>{
+            if(!err) {
+                res.json(course)
+            }else {
+                
+            }
+        })
   }
 
   // [GET] /news/:slug
@@ -12,4 +19,4 @@ class SiteController {
   }
 }
 
-module.exports = new SiteController;
+module.exports = new SiteController();
