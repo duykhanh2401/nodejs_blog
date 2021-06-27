@@ -5,6 +5,7 @@ async function connect() {
     await mongoose.connect('mongodb://localhost:27017/duykhanh_education_dev', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     });
     console.log('connect success !!!');
   } catch (error) {
