@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+
 async function connect() {
   try {
     await mongoose.connect('mongodb://localhost:27017/duykhanh_education_dev', {
@@ -12,5 +14,7 @@ async function connect() {
     console.log('connect error !!!');
   }
 }
+
+
 
 module.exports = { connect };
